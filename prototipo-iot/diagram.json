@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "Evandio",
+  "editor": "Wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 14.3, "left": 33.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -78.1, "left": 38.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serial:RX", "", [] ],
+    [ "esp:RX", "$serial:TX", "", [] ],
+    [ "pot1:GND", "esp:GND.1", "#8f4814", [ "v0" ] ],
+    [ "pot1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "pot1:SIG", "esp:D34", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
