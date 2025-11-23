@@ -1,12 +1,13 @@
-# Sistema de Alerta de Desmatamento (Projeto IoT)
+# Sistema de Alerta de Desmatamento Local (SADEL)
 
-Este é o repositório do "Araripe IoT Alert", desenvolvido por alunos de Análise e Desenvolvimento de Sistemas da UniFAP. O objetivo é um sistema de monitoramento e alerta de desmatamento em tempo real para a região da Chapada do Araripe.
+Este é o repositório do "SADEL", desenvolvido por alunos de Análise e Desenvolvimento de Sistemas da UniFAP. O objetivo é um sistema de monitoramento e alerta de desmatamento e queimadas em tempo real para a região da Chapada do Araripe.
 
 ---
 
 ## Funcionalidades Principais
 
 * **Detecção de Som:** O protótipo usa um sensor (simulado no Wokwi por um potenciômetro) para identificar padrões sonoros que sugerem o uso de motosserras.
+* **Detecção de Queimadas:** Um segundo sensor (também simulado) monitora a fumaça e o gás no ambiente, ativando um alerta imediato em caso de risco de incêndio.
 * **Alerta em Tempo Real:** Ao detectar um som suspeito acima de um limite, o sistema envia um pacote de alerta imediatamente para um banco de dados na nuvem (Firebase).
 * **Monitoramento de Status:** O sensor envia um "sinal de vida" (heartbeat) a cada 30 segundos para confirmar que está online e funcionando.
 * **Dashboard de Visualização:** Um dashboard web simples (feito em HTML/CSS/JS) consome os dados do Firebase e exibe os alertas recebidos.

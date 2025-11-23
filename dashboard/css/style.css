@@ -1,0 +1,1464 @@
+/* === STYLE.CSS - TEMA CLARO (LIGHT MODE) === */
+
+/* Reset */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;
+  background-color: #f4f6f8; /* Fundo cinza bem clarinho */
+  color: #1f2937; /* Texto cinza escuro (quase preto) */
+  line-height:1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,h2,h3,h4{font-weight:600; color: #111827;}
+button{font-family:inherit;cursor:pointer}
+ul{list-style:none}
+
+/* Header */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 32px;
+  background:#ffffff; /* Branco */
+  border-bottom:1px solid #e5e7eb; /* Borda cinza claro */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.logo{display:flex;align-items:center;gap:12px;font-size:20px; font-weight: 700;}
+.logo h1{font-size:20px; color: #111827;}
+.logo-icon{
+  width:28px;
+  height:28px;
+  background:#10b981; /* Verde da marca */
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  color: #fff;
+}
+
+.nav{display:flex;gap:32px}
+.nav-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#6b7280; /* Cinza médio */
+  text-decoration:none;
+  font-size:14px;
+  font-weight: 500;
+  transition:all .2s;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.nav-item:hover{
+    color:#111827;
+    background-color: #f3f4f6;
+}
+.nav-item.active{
+    background-color: #ecfdf5; /* Fundo verde bem claro */
+    color: #059669; /* Texto verde escuro */
+    font-weight:600;
+}
+.nav-item svg{width:18px;height:18px;}
+
+.user-section{display:flex;align-items:center;gap:16px}
+.notification-btn{
+  position:relative;
+  width:36px;
+  height:36px;
+  background:none;
+  border:none;
+  color:#6b7280;
+  transition:color .2s;
+}
+.notification-btn:hover{color:#111827}
+.badge{
+  position:absolute;
+  top:-2px;
+  right:-2px;
+  background:#ef4444;
+  color:#fff;
+  border-radius:10px;
+  padding:2px 6px;
+  font-size:10px;
+  font-weight:700;
+  border: 2px solid #fff; /* Borda branca para destacar */
+}
+
+.user-info{display:flex;align-items:center;gap:10px}
+.avatar{
+  width:36px;
+  height:36px;
+  background:#10b981;
+  color: #fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+  font-size:14px;
+}
+.user-name{font-size:14px;font-weight:600; color: #111827;}
+.user-role{font-size:12px;color:#6b7280}
+
+/* Main */
+.container{padding:32px;max-width:1600px;margin:0 auto}
+.page-header{margin-bottom:32px}
+.page-title{font-size:28px;letter-spacing:-.5px;margin-bottom:8px; color: #111827;}
+.page-subtitle{font-size:14px;color:#6b7280;}
+
+/* Stats */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin-bottom:32px;
+}
+
+.stat-card{
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:24px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.stat-icon{
+  width:48px;
+  height:48px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:16px;
+  font-size:20px;
+}
+.stat-icon svg{width:24px;height:24px}
+/* Cores dos ícones ajustadas para fundo claro */
+.stat-icon.red{background:#fef2f2; color:#dc2626}
+.stat-icon.orange{background:#fff7ed; color:#ea580c}
+.stat-icon.green{background:#ecfdf5; color:#059669}
+.stat-icon.blue{background:#eff6ff; color:#2563eb}
+
+.stat-label{font-size:14px; font-weight: 500; color:#6b7280; margin-bottom:8px}
+.stat-value{font-size:36px; font-weight:700; margin-bottom:4px; letter-spacing:-1px; color: #111827;}
+.stat-detail{font-size:13px; color:#6b7280}
+
+/* Grid */
+.main-grid{display:grid;grid-template-columns:2fr 1fr;gap:24px}
+
+.panel{
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:24px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.panel-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:24px;
+}
+.panel-title{font-size:18px; font-weight: 600; color: #111827;}
+
+.fullscreen-btn{
+  background:none;
+  border:none;
+  color:#9ca3af;
+  font-size:18px;
+  padding:4px;
+  transition:color .2s;
+}
+.fullscreen-btn:hover{color:#111827}
+
+/* Map */
+.map-wrapper{position:relative}
+#map{width:100%;height:500px;border-radius:8px;background:#e5e7eb}
+
+.legend{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  background:rgba(255,255,255,0.95); /* Fundo branco semi-transparente */
+  border:1px solid #e5e7eb;
+  border-radius:8px;
+  padding:16px;
+  z-index:1000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.legend h4{font-size:14px;margin-bottom:12px; color: #111827;}
+.legend ul{display:flex;flex-direction:column;gap:8px}
+.legend li{display:flex;align-items:center;gap:10px;font-size:13px;color:#4b5563}
+.legend-color{width:16px;height:16px;border-radius:50%}
+.legend-color.red{background:#ef4444}
+.legend-color.orange{background:#f97316}
+.legend-color.green{background:#10b981}
+
+/* Feed */
+.tabs{display:flex;gap:8px;margin-bottom:20px; border-bottom: 1px solid #e5e7eb; padding-bottom: 12px;}
+.tab{
+  background:none;
+  border:none;
+  color:#6b7280;
+  padding:8px 12px;
+  border-radius:6px;
+  font-size:14px;
+  font-weight: 500;
+  transition:all .2s;
+}
+.tab:hover{background-color: #f3f4f6; color: #111827;}
+.tab.active{background-color:#ecfdf5; color:#059669;}
+
+.feed{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  max-height:460px;
+  overflow-y:auto;
+}
+.feed::-webkit-scrollbar{width:6px}
+.feed::-webkit-scrollbar-track{background:transparent}
+.feed::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:3px}
+
+.alert-item{
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  border-radius:8px;
+  padding:16px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  cursor:pointer;
+  transition:all .2s;
+}
+.alert-item:hover{border-color:#d1d5db; background:#f9fafb; transform: translateY(-1px);}
+
+.alert-icon{
+  width:40px;
+  height:40px;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.alert-icon svg{width:20px;height:20px}
+/* Ícones do feed com fundo claro */
+.alert-icon.red{background:#fef2f2; color:#dc2626}
+.alert-icon.orange{background:#fff7ed; color:#ea580c}
+.alert-icon.green{background:#ecfdf5; color:#059669}
+
+.alert-content{flex:1}
+.alert-header{display:flex;justify-content:space-between;align-items:start;margin-bottom:4px}
+.alert-title{font-size:15px; font-weight: 600; color: #111827;}
+.alert-location{font-size:13px;color:#6b7280}
+
+.alert-meta{display:flex;align-items:center;gap:8px;margin-bottom:8px; margin-top: 8px;}
+.confidence{
+  background:#f3f4f6;
+  color: #374151;
+  border:1px solid #e5e7eb;
+  border-radius:4px;
+  padding:2px 8px;
+  font-size:12px;
+  font-weight:600;
+}
+.timestamp{font-size:12px;color:#9ca3af;line-height:1.3}
+
+.status{
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:4px;
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+.status.novo{background:#fee2e2; color:#b91c1c}
+.status.analise{background:#ffedd5; color:#c2410c}
+.status.resolvido{background:#d1fae5; color:#047857}
+
+/* Responsividade */
+@media(max-width:1200px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .main-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .stats{grid-template-columns:1fr}
+  .nav{display:none} /* Esconde menu no mobile, idealmente precisaria de um menu sanduíche */
+}
+
+/* --- ESTILOS PARA RELATORIOS.HTML (TEMA CLARO) --- */
+
+.reports-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-secondary, .btn-primary {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #374151;
+}
+.btn-secondary:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.btn-primary {
+    background-color: #10b981;
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: #059669;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.chart-wrapper {
+    position: relative;
+    height: 350px;
+}
+
+.heatmap-panel {
+    margin-bottom: 24px;
+}
+.heatmap-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+    height: 400px;
+}
+
+#heatmap-map {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #e5e7eb;
+    border: 1px solid #e5e7eb;
+}
+
+.heatmap-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 5px;
+    gap: 8px;
+}
+
+.heatmap-list .zone-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    font-weight: 500;
+    color: #374151;
+}
+.heatmap-list .zone-item:hover {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+}
+.heatmap-list .zone-item span:last-child {
+    font-weight: 700;
+    color: #111827;
+}
+
+/* Resumo Executivo */
+.summary-executive {
+    margin-bottom: 24px;
+}
+.summary-executive .panel-title {
+    margin-bottom: 20px;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.summary-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.summary-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+.summary-value {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #111827;
+}
+.summary-detail {
+    font-size: 13px;
+    color: #10b981; /* Verde */
+    font-weight: 500;
+}
+.summary-detail.negative {
+    color: #ef4444; /* Vermelho */
+}
+
+/* Tooltip do Mapa (Heatmap) */
+.zone-label {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #111827; /* Texto escuro */
+    font-weight: 600;
+    font-family: 'Inter', -apple-system, sans-serif;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* === ESTILOS DO MODAL DE AÇÃO === */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Fica acima de tudo */
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.modal-overlay.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: translateY(0);
+    transition: transform 0.2s ease;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 12px;
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    color: #111827;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #9ca3af;
+    cursor: pointer;
+}
+.close-btn:hover { color: #111827; }
+
+.modal-body p {
+    margin-bottom: 12px;
+    color: #4b5563;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.action-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.btn-orange {
+    background-color: #fff7ed;
+    color: #c2410c;
+    border: 1px solid #ffedd5;
+}
+.btn-orange:hover { background-color: #ffedd5; }
+
+.btn-green {
+    background-color: #d1fae5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+.btn-green:hover { background-color: #a7f3d0; }
+
+/* Desativar botão (quando já está naquele status) */
+.action-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(1);
+}
+
+.action-trigger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9ca3af;
+    padding: 4px;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+.action-trigger:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+/* Estilo para o Select de Período */
+select.btn-secondary {
+    appearance: none; /* Remove estilo padrão do navegador */
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23374151%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 0.65rem auto;
+    padding-right: 2.5rem; /* Espaço para a setinha */
+    font-family: inherit;
+    cursor: pointer;
+}
+
+select.btn-secondary:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* === LOGIN PAGE STYLES (Pixel Perfect v2) === */
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F9FAFB;
+    /* Opcional: Adiciona a textura de pontinhos se quiser igual à referência da direita */
+    background-image: radial-gradient(#E5E7EB 1px, transparent 1px);
+    background-size: 24px 24px;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.login-wrapper {
+    width: 100%;
+    /* AUMENTADO: De 480px para 540px para o texto caber em uma linha */
+    max-width: 540px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header (Logo) */
+.login-header {
+    /* Transforma o cabeçalho inteiro em uma coluna flexível */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Força o alinhamento central perfeito */
+    justify-content: center;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Espaço entre a árvore e o SADEL */
+    margin-bottom: 8px;
+    width: 100%; /* Garante que o container ocupe a largura para centralizar */
+}
+
+.logo-area .logo-img {
+    /* Se você estiver usando a imagem da árvore */
+    height: 40px; 
+    width: auto;
+    object-fit: contain;
+}
+
+/* Caso ainda esteja usando a div com ícone, mantenha este, senão pode apagar */
+.logo-area .logo-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #10B981;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.logo-area h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -0.5px;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 15px;
+    color: #6B7280;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Card */
+.login-card {
+    background-color: #ffffff;
+    padding: 40px; /* Mais espaço interno (padding) */
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* Sombra mais suave e difusa */
+    border: 1px solid #E5E7EB;
+    width: 100%;
+    text-align: left;
+}
+
+.card-title {
+    font-family: 'Inter', sans-serif; /* Garante que é Inter */
+    font-size: 26px;
+    font-weight: 800; /* Extra Bold - O segredo da referência */
+    color: #111827;   /* Um preto levemente azulado, não preto puro */
+    margin-bottom: 8px;
+    margin-top: 0;
+    letter-spacing: -0.025em; /* Aproxima as letras (o toque final) */
+}
+
+.card-subtitle {
+    font-size: 15px;
+    color: #6B7280;
+    margin-bottom: 32px;
+    line-height: 1.5;
+    white-space: nowrap; /* Força ficar em uma linha se houver espaço */
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 24px; /* Mais espaçamento entre campos */
+}
+
+.login-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700; /* Labels mais grossas */
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon-left {
+    position: absolute;
+    left: 16px;
+    color: #9CA3AF;
+    font-size: 18px; /* Ícone um pouco maior */
+    pointer-events: none;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 16px;
+    color: #9CA3AF;
+    cursor: pointer;
+}
+.toggle-password:hover { color: #4B5563; }
+
+.login-form input {
+    width: 100%;
+    padding: 14px 16px 14px 48px; /* Inputs mais altos */
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #1F2937;
+    background-color: #F3F4F6;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.login-form input::placeholder {
+    color: #9CA3AF;
+}
+
+.login-form input:focus {
+    outline: none;
+    background-color: #fff;
+    border-color: #10B981;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1); /* Shadow ring maior */
+}
+
+/* Link e Botão */
+.form-options {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.forgot-password {
+    font-size: 14px;
+    color: #047857; /* Verde um pouco mais escuro */
+    font-weight: 600;
+    text-decoration: none;
+}
+.forgot-password:hover { text-decoration: underline; }
+
+.login-btn {
+    width: 100%;
+    padding: 14px; /* Botão mais alto */
+    font-size: 16px;
+    font-weight: 700; /* Texto do botão mais grosso */
+    color: white;
+    background-color: #006B2C;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #065f46;
+}
+
+/* === ESTILOS DA PÁGINA DE SENSORES === */
+
+.sensors-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Mapa maior, Lista menor */
+    gap: 24px;
+    height: calc(100vh - 180px); /* Ocupa a altura restante */
+    min-height: 600px;
+}
+
+/* Painel do Mapa */
+.map-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.map-filters {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-pill {
+    background: #fff;
+    border: 1px solid #d1d5db;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.filter-pill:hover { background: #f9fafb; }
+.filter-pill.active {
+    background: #10b981;
+    color: #fff;
+    border-color: #10b981;
+}
+
+.map-wrapper-large {
+    flex: 1;
+    margin-top: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+#sensors-map {
+    width: 100%;
+    height: 100%;
+    background: #e5e7eb;
+}
+
+/* Painel da Lista */
+.list-panel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Impede que o painel cresça demais */
+}
+
+.status-summary {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.status-box {
+    flex: 1;
+    text-align: center;
+    background: #ecfdf5; /* Verde claro */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d1fae5;
+}
+.status-box.warning { background: #fff7ed; border-color: #ffedd5; }
+.status-box.danger { background: #fef2f2; border-color: #fee2e2; }
+
+.status-num {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #065f46;
+}
+.warning .status-num { color: #9a3412; }
+.danger .status-num { color: #991b1b; }
+
+.status-label {
+    font-size: 11px;
+    color: #6b7280;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Lista de Cards com Scroll */
+.sensors-list {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
+.sensors-list::-webkit-scrollbar { width: 6px; }
+.sensors-list::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+
+/* Card do Sensor Individual */
+.sensor-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+    background: #fff;
+    transition: all 0.2s;
+}
+.sensor-card:hover {
+    border-color: #10b981;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.sensor-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.sensor-icon {
+    width: 32px;
+    height: 32px;
+    background: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+}
+.sensor-info h4 { font-size: 14px; margin: 0; color: #111827; }
+.sensor-info p { font-size: 12px; margin: 0; color: #6b7280; }
+
+.sensor-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    background: #f9fafb;
+    padding: 10px;
+    border-radius: 6px;
+}
+.stat-item span { display: block; }
+.stat-label { font-size: 10px; color: #9ca3af; text-transform: uppercase; }
+.stat-val { font-size: 13px; font-weight: 600; color: #374151; }
+
+/* Indicador de Status (Bolinha) */
+.sensor-status-dot {
+    margin-left: auto; /* Empurra para a direita */
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #ccc; }
+.online .dot { background: #10b981; }
+.online { color: #059669; }
+.offline .dot { background: #ef4444; }
+.offline { color: #dc2626; }
+
+@media(max-width: 1024px) {
+    .sensors-layout { grid-template-columns: 1fr; height: auto; }
+    .map-wrapper-large { height: 400px; }
+}
+
+/* === MENU DROPDOWN DO USUÁRIO === */
+
+.user-dropdown-wrapper {
+    position: relative; /* Necessário para o menu absoluto funcionar */
+}
+
+.user-info {
+    cursor: pointer; /* Mãozinha ao passar o mouse */
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.user-info:hover {
+    background-color: #f3f4f6;
+}
+
+/* A Caixa do Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 120%; /* Logo abaixo do nome */
+    right: 0;
+    width: 220px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    z-index: 3000; /* Acima de tudo */
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease;
+}
+
+/* Estado Escondido */
+.dropdown-menu.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Cabeçalho do Menu (Nome/Email) */
+.dropdown-header {
+    padding: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    border-radius: 10px 10px 0 0;
+}
+
+.dropdown-user-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.dropdown-user-email {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 2px 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Links do Menu */
+.dropdown-links {
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.dropdown-links li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #374151;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.dropdown-links li a:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.dropdown-links li a i {
+    width: 16px; /* Alinha os ícones */
+    text-align: center;
+    color: #9ca3af;
+}
+
+/* Divisor */
+.dropdown-links .divider {
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 8px 0;
+}
+
+/* Item de Sair (Vermelho ao passar o mouse) */
+.dropdown-links .logout-item a:hover {
+    background-color: #fef2f2;
+    color: #dc2626;
+}
+.dropdown-links .logout-item a:hover i {
+    color: #dc2626;
+}
+
+/* Controla o tamanho da imagem do logo */
+.logo img {
+    height: 40px; /* Tamanho fixo para caber no menu */
+    width: auto;  /* Mantém a proporção da imagem */
+    object-fit: contain; /* Garante que a imagem não distorça */
+}
+
+/* Garante que o container do logo alinhe tudo no centro */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* === RESPONSIVIDADE (COLE NO FINAL DO STYLE.CSS) === */
+
+/* === RESPONSIVIDADE E MENU MOBILE (Versão Limpa) === */
+
+/* 1. Botão Mobile (Hambúrguer) - Só aparece no celular */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #374151;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+}
+.mobile-menu-btn:hover {
+    background-color: #f3f4f6;
+}
+
+/* 2. Perfil dentro do Menu (Escondido no PC) */
+.mobile-user-options {
+    display: none;
+}
+
+/* --- TABLETS (Max 1024px) --- */
+@media (max-width: 1024px) {
+    .container { padding: 20px; }
+    
+    .stats, .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .main-grid, .charts-grid, .heatmap-grid, .sensors-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    
+    #map, #heatmap-map, #sensors-map { height: 400px; }
+    .feed, .heatmap-list { max-height: 400px; }
+    .map-wrapper-large { height: 400px; }
+}
+
+/* --- CELULARES (Max 768px) --- */
+/* --- CELULARES (Max 768px) --- */
+/* --- CELULARES (Max 768px) --- */
+/* === CORREÇÃO FINAL MOBILE (Substitua o final do seu CSS) === */
+
+/* 1. Trava Global de Largura (Impede rolagem lateral) */
+html, body {
+    max-width: 100vw; /* Largura máxima é a tela */
+    overflow-x: hidden; /* Corta qualquer excesso lateral */
+    position: relative;
+}
+
+/* 2. Ajustes Específicos para Celular */
+@media (max-width: 768px) {
+    
+    /* Container principal mais justo */
+    .container {
+        padding: 12px; /* Menos espaço nas bordas da tela */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Header ajustado */
+    .header {
+        padding: 12px 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Ajustes de Texto */
+    .logo h1 { font-size: 18px; }
+    .page-title { font-size: 20px; }
+
+    /* Botões e Menus */
+    .notification-btn, .user-dropdown-wrapper { display: none; }
+    .mobile-menu-btn { display: block; margin-left: auto; padding: 8px; }
+
+    /* Menu Gaveta (Mobile) */
+    .nav {
+        display: none; /* Escondido por padrão */
+        position: absolute; /* Flutua sobre o conteúdo */
+        top: 100%; /* Começa logo abaixo do cabeçalho */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        padding: 16px; /* Mais espaço interno */
+        border-bottom: 1px solid #e5e7eb;
+        
+        /* Sombra forte para destacar que está flutuando */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        
+        z-index: 9999; /* Garante que fique em cima de TUDO */
+    }
+
+    /* Quando ativo, vira Flex */
+    .nav.active {
+        display: flex !important; /* Força bruta para aparecer */
+        top: 60px; /* Garante que não fique escondido atrás do header */
+    }
+    .nav.active { display: flex; }
+    .nav-item { width: 100%; justify-content: flex-start; }
+
+    /* Perfil no Menu */
+    .mobile-user-options {
+        display: flex; flex-direction: column;
+        margin-top: 16px; padding-top: 16px;
+        border-top: 1px solid #e5e7eb;
+    }
+    .mobile-user-info { display: flex; align-items: center; gap: 12px; padding: 0 12px 12px; }
+    .mobile-user-name { font-size: 14px; font-weight: 700; margin: 0; }
+    .mobile-user-email { font-size: 12px; color: #6b7280; margin: 0; }
+
+    /* --- CORREÇÃO CRÍTICA DE LAYOUT --- */
+    
+    /* Transforma tudo em 1 coluna */
+    .stats, .summary-grid, .main-grid, .charts-grid, .heatmap-grid, .sensors-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    /* Força os cards a não vazarem */
+    .panel, .stat-card, .summary-card, .login-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 16px; /* Reduzi de 24px para 16px para dar mais espaço ao conteúdo */
+        margin: 0;
+    }
+
+    /* Mapa e Gráficos: Largura controlada */
+    .map-wrapper, .map-wrapper-large, .chart-wrapper {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #map, #heatmap-map, #sensors-map {
+        width: 100% !important;
+        height: 300px; /* Altura um pouco menor para caber melhor na tela */
+        max-width: 100%;
+    }
+
+    /* Correção das Tabelas e Listas */
+    .feed, .heatmap-list {
+        max-height: 350px;
+    }
+
+    /* Correção da página de Relatórios (Botões empilhados) */
+    .reports-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .page-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #periodo-select, #btn-export-csv, .btn-primary, select.btn-secondary {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Correção das Abas (Scroll lateral se não couber) */
+    .tabs {
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+
+    /* --- REFINAMENTO FINAL MOBILE --- */
+
+    /* 1. Ajuste dos Botões de Filtro (Sensores) */
+    .map-filters {
+        display: flex;
+        gap: 8px;
+        width: 100%; /* Ocupa a largura toda */
+    }
+    
+    .filter-pill {
+        flex: 1; /* Todos com o mesmo tamanho */
+        text-align: center;
+        padding: 8px 4px; /* Ajuste para texto não quebrar */
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px; /* Altura fixa para alinhar */
+    }
+
+    /* 2. Ajuste do Mapa de Calor e Zonas */
+    .heatmap-grid {
+        display: flex;
+        flex-direction: column;
+        height: auto; /* Deixa crescer conforme o conteúdo */
+        gap: 16px;
+    }
+
+    #heatmap-map {
+        height: 300px; /* Altura fixa boa para mobile */
+        width: 100% !important;
+    }
+
+    /* Lista de Zonas mais compacta e bonita */
+    .heatmap-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 colunas de zonas */
+        gap: 10px;
+        max-height: none; /* Remove scroll, mostra tudo */
+        padding-right: 0;
+    }
+
+    .heatmap-list .zone-item {
+        font-size: 12px;
+        padding: 10px;
+        flex-direction: column; /* Texto em cima, número embaixo */
+        align-items: center;
+        text-align: center;
+        gap: 4px;
+    }
+    
+    .heatmap-list .zone-item span:last-child {
+        font-size: 16px; /* Número maior */
+    }
+
+    /* 3. Ajuste dos Tooltips do Mapa (Labels das Zonas) */
+    /* Esconde os labels flutuantes no celular para não poluir o mapa */
+    .leaflet-tooltip {
+        display: none !important;
+    }
+}
+
+/* === CORREÇÕES FINAIS DE POLIMENTO (Botões e Espaçamento) === */
+
+/* 1. Conserta os Botões de Filtro (Sensores) */
+.filter-pill {
+    white-space: nowrap !important;   /* PROIBIDO quebrar linha (Texto fica reto) */
+    display: inline-flex !important;  /* Alinha texto e número na mesma linha */
+    align-items: center;
+    justify-content: center;
+    width: auto !important;           /* Deixa o botão ter o tamanho que precisa */
+    flex: 0 0 auto !important;        /* Impede que o layout esmague o botão */
+    min-width: 80px;                  /* Tamanho mínimo confortável */
+    padding: 8px 16px !important;
+}
+
+.map-filters {
+    flex-wrap: wrap !important;       /* Se não couber na tela, o botão cai pra linha de baixo (não espreme) */
+    gap: 10px;
+}
+
+/* 2. Descola o Resumo Executivo (Relatórios) */
+.summary-executive {
+    margin-top: 48px !important;      /* Adiciona um bom espaço acima do título */
+    position: relative;
+}
+
+/* Opcional: Adiciona uma linha divisória suave antes do resumo */
+.summary-executive::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #e5e7eb;
+    margin-bottom: 24px;
+}
+
+/* === CORREÇÃO FINAL: BOTÕES DO MAPA (MOBILE) === */
+
+@media (max-width: 768px) {
+    
+    /* 1. Força o cabeçalho do mapa a empilhar (Título em cima, Botões embaixo) */
+    .map-panel .panel-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+
+    /* 2. Estica a caixa dos botões para ocupar a largura toda */
+    .map-filters {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important; /* Garante que fiquem lado a lado */
+        justify-content: space-between !important;
+        gap: 8px !important;
+    }
+
+    /* 3. Faz os 3 botões terem exatamente o mesmo tamanho */
+    .filter-pill {
+        flex: 1 !important; /* Cada um pega 33% do espaço */
+        text-align: center !important;
+        justify-content: center !important;
+        padding: 8px 4px !important;
+        margin: 0 !important;
+        width: auto !important;
+    }
+
+    /* === ESTILOS PARA CARTÕES DE SENSORES DINÂMICOS === */
+
+.sensor-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 10px;
+    border-left: 5px solid #ccc; /* Cor padrão offline */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.sensor-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sensor-card.online {
+    border-left-color: #10b981; /* Verde */
+}
+
+.sensor-card.offline {
+    border-left-color: #ef4444; /* Vermelho */
+}
+
+.sensor-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #1f2937;
+}
+
+.sensor-id {
+    font-size: 0.85em;
+    color: #6b7280;
+    margin: 0;
+}
+
+.last-seen {
+    font-size: 0.8em;
+    color: #9ca3af;
+    margin-top: 4px;
+}
+
+.sensor-status {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-badge.online {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-badge.offline {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.battery-level {
+    font-size: 0.85em;
+    color: #4b5563;
+    font-weight: 600;
+}
+}

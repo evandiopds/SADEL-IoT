@@ -1,0 +1,13 @@
+secrets.h
+*.env
+*.key
+
+sensor_norte/.pio/
+sensor_sul/.pio/
+*.bin
+*.elf
+*.hex
+
+.vscode/
+.DS_Store
+Thumbs.db
