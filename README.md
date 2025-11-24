@@ -36,8 +36,8 @@ Este projeto é dividido em duas partes principais:
 O projeto está organizado nas seguintes pastas:
 
 * **/dashboard/**: Contém todos os arquivos do frontend web (HTML, CSS, JS) responsável por exibir os alertas.
-* **/prototipo-iot/**: Contém os arquivos do protótipo desenvolvido e simulado no Wokwi, incluindo o código-fonte (`.ino`) e o diagrama do circuito (`diagram.json`).
-
+* **/sensor\_norte/**: Contém o projeto PlatformIO do **Sensor 1 (Crato)**. Inclui o código-fonte (`src/main.cpp`), o arquivo de configuração (`platformio.ini`), e a definição do circuito (`diagram.json`).
+* **/sensor\_sul/**: Contém o projeto PlatformIO do **Sensor 2 (Barbalha)**. Inclui o código-fonte (`src/main.cpp`), o arquivo de configuração (`platformio.ini`), e a definição do circuito (`diagram.json`).
 ---
 
 ## Aviso de Configuração
