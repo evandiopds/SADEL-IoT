@@ -10,8 +10,7 @@ body{
 }
 
 h1,h2,h3,h4{font-weight:600; color: #111827;}
-button{font-family:inherit;cursor:pointer}
-ul{list-style:none}
+button{font-family:inherit;cursor:pointer}git pull
 
 .header{
   display:flex;
