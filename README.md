@@ -36,17 +36,16 @@ Este projeto é dividido em duas partes principais:
 O projeto está organizado nas seguintes pastas:
 
 * **/dashboard/**: Contém todos os arquivos do frontend web (HTML, CSS, JS) responsável por exibir os alertas.
-* **/prototipo-iot/**: Contém os arquivos do protótipo desenvolvido e simulado no Wokwi, incluindo o código-fonte (`.ino`) e o diagrama do circuito (`diagram.json`).
-
+* **/sensor\_norte/**: Contém o projeto PlatformIO do **Sensor 1 (Crato)**. Inclui o código-fonte (`src/main.cpp`), o arquivo de configuração (`platformio.ini`), e a definição do circuito (`diagram.json`).
+* **/sensor\_sul/**: Contém o projeto PlatformIO do **Sensor 2 (Barbalha)**. Inclui o código-fonte (`src/main.cpp`), o arquivo de configuração (`platformio.ini`), e a definição do circuito (`diagram.json`).
 ---
 
 ## Aviso de Configuração
 
-Para que o projeto funcione, você **DEVE** fornecer suas próprias credenciais.
+Para que o projeto funcione, você **DEVE** fornecer suas próprias credenciais. Os arquivos de código foram enviados ao GitHub sem chaves de API, hosts de banco de dados e tokens de autenticação (dados sensíveis). Caso queira testar o projeto, você precisará configurar os seguintes arquivos:
 
-Os arquivos de código (`.ino` do protótipo e `.js` do dashboard) foram enviados ao GitHub **sem** as chaves de API, senhas de Wi-Fi e hosts do banco de dados.
-
-Caso queira testar o projeto, você precisará inserir suas próprias credenciais do Firebase e do Wi-Fi nos locais indicados dentro dos arquivos.
+1. Firmware (C++/Sensores): Você precisará criar o arquivo secrets.h nas pastas de cada sensor e inserir suas credenciais de Firebase e Wi-Fi para que o código compile e se conecte à internet.
+2. Dashboard (JS): Você precisará substituir os placeholders (SUA_API_KEY_AQUI, etc.) nos arquivos JavaScript (dentro da pasta /dashboard/) para que o site funcione e consuma seu banco de dados.
 
 ---
 ## Autores
